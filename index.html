@@ -3,10 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASP Studios</title>
+    <title>ASP Studios | Premium Streetwear & Neo-Y2K Fashion</title>
+    <meta name="description" content="ASP Studios: Marca de streetwear premium y moda contemporánea. Exclusividad, diseño y cultura urbana.">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="ASP Studios | Premium Streetwear">
+    <meta property="og:description" content="Descubre la nueva colección. Exclusividad y estética contemporánea.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://aspstudios.com">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "ASP Studios",
+      "url": "https://aspstudios.com",
+      "logo": "https://aspstudios.com/assets/images/logo.png",
+      "priceRange": "$$$",
+      "description": "Premium streetwear and contemporary luxury fashion brand."
+    }
+    </script>
 </head>
-<body>
-    <h1>ASP Studios</h1>
-    <p>Bienvenido a nuestra web.</p>
+<body class="smooth-scroll">
+    <div class="custom-cursor"></div>
+
+    <header class="navbar hidden-nav">
+        <div class="nav-left">
+            <a href="/pages/shop.html" class="nav-link">Shop</a>
+            <a href="/pages/collections.html" class="nav-link">Collections</a>
+        </div>
+        <div class="nav-center">
+            <a href="/index.html" class="brand-logo">ASP STUDIOS</a>
+        </div>
+        <div class="nav-right">
+            <a href="/pages/search.html" class="nav-link">Search</a>
+            <a href="/pages/login.html" class="nav-link">Account</a>
+            <button id="cart-toggle" class="nav-link cart-btn">Cart (<span id="cart-count">0</span>)</button>
+            <div class="lang-switch">
+                <span class="active">ES</span> / <span>EN</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">0.00€</span>
+            </div>
+            <a href="/pages/checkout.html" class="btn-primary checkout-btn">Checkout</a>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <main data-scroll-container>
+        <section class="hero" data-scroll-section>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=2574&auto=format&fit=crop" alt="ASP Studios Campaign" class="parallax-img">
+            </div>
+            <div class="hero-content fade-up">
+                <h1 class="hero-title">REDEFINING<br>CONTEMPORARY</h1>
+                <p class="hero-subtitle">The New Era of Luxury Streetwear.</p>
+                <a href="/pages/shop.html" class="btn-primary">Shop the Collection</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section class="categories-section section-padding" data-scroll-section>
+            <div class="container reveal">
+                <h2 class="section-title">Explore ASP</h2>
+                <div class="categories-grid">
+                    <a href="/pages/category-men.html" class="category-card hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop" alt="Men">
+                        <div class="category-overlay"><h3>Menswear</h3></div>
+                    </a>
+                    <a href="/pages/category-women.html" class="category-card hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Women">
+                        <div class="category-overlay"><h3>Womenswear</h3></div>
+                    </a>
+                    <a href="/pages/category-accessories.html" class="category-card hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=800&auto=format&fit=crop" alt="Accessories">
+                        <div class="category-overlay"><h3>Accessories</h3></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-arrivals section-padding bg-light" data-scroll-section>
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2 class="section-title">New Arrivals</h2>
+                    <a href="/pages/shop.html" class="link-arrow">View All</a>
+                </div>
+                <div class="product-grid" id="featured-products">
+                    </div>
+            </div>
+        </section>
+
+        <section class="brand-story" data-scroll-section>
+            <div class="story-bg">
+                <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?q=80&w=2574&auto=format&fit=crop" alt="Brand Story" class="parallax-img">
+            </div>
+            <div class="story-content reveal">
+                <h2 class="serif-title">Born in the Streets. Crafted for Luxury.</h2>
+                <p>A distinctive aesthetic blending Neo-Y2K nostalgia with contemporary high-end tailoring. Unapologetic, exclusive, ASP Studios.</p>
+                <a href="/pages/about.html" class="btn-secondary">Discover Our Story</a>
+            </div>
+        </section>
+
+        <div class="chat-widget">
+            <button class="chat-toggle-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="brand-logo">ASP STUDIOS</h2>
+                    <p>Premium Streetwear Label</p>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">TikTok</a>
+                        <a href="#">X</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <a href="/pages/shop.html">All Products</a>
+                    <a href="#">Menswear</a>
+                    <a href="#">Womenswear</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Archive Sale</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/faq.html">FAQ</a>
+                    <a href="/pages/shipping.html">Shipping & Returns</a>
+                    <a href="/pages/terms.html">Terms & Conditions</a>
+                    <a href="/pages/privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Join the Club</h4>
+                    <p>Exclusive access to drops and sales.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ASP Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
