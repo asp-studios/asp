@@ -484,3 +484,7 @@ h1, h2, h3, h4, h5, h6, .serif-title, .brand-logo {
     .footer-grid { grid-template-columns: 1fr; }
     .hero-title { font-size: 12vw; }
 }
+
+body {
+    cursor: auto !important;
+}
